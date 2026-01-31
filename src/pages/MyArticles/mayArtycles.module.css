@@ -1,0 +1,42 @@
+.container {
+    width: 960px;
+    margin: 16px auto;
+}
+
+.article-container {
+    border: 1px solid #bdc3c7;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+}
+
+.text-article {
+    margin: 16px 0;
+    white-space: pre-line;
+}
+
+.article-container button {
+    margin-right: 16px;
+}
+
+img {
+    width: 480px;
+    display: block;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 450px) {
+    .container {
+        max-width: 100%;
+        margin: 16px auto;
+    }
+
+    .article-container {
+        margin-inline: 4px;
+    }
+
+    img {
+        max-width: 100%;
+        margin-block: 8px;
+    }
+}

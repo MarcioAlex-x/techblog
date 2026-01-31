@@ -1,0 +1,17 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 16px;
+    padding-block: 8px;
+    background-color: #bdc3c7b0;
+    width: 100%;
+}
+.nav-button{
+    display: flex;
+    align-items: center;
+}
+.nav-button p{
+    font-weight: 400;
+    margin-right: 16px;
+    color: #7f8c8d;
+}

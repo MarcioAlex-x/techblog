@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ecf0f1;
+    caret-color: transparent;
+}
+
+.btn {
+    border: none;
+    font-weight: bold;
+    padding: 4px 16px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+.btn-action {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+.btn-action:hover {
+    background-color: #27ae60;
+}
+
+.btn-action .link {
+    color: #fff;
+    text-align: center;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.nav-link {
+    color: #2c3e50;
+    font-weight: bold;
+    margin-right: 16px;
+}
+
+.active {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 16px;
+    transition: .3s;
+}
+
+form {
+    width: 960px;
+    margin: 80px auto 0;
+}
+
+.form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container input,
+.form-container textarea {
+    margin-bottom: 16px;
+    background-color: transparent;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    outline: transparent;
+    padding: 4px;
+    caret-color: #2c3e50;
+}
+
+.form-container textarea {
+    height: 400px;
+    resize: none;
+}
+
+input[type='checkbox'] {
+    margin-bottom: 16px;
+    margin-right: 8px;
+}
+
+.dialog-box {
+    width: 480px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Roboto";
+}
+
+p,
+span,
+.link,
+.nav-link,
+label {
+    font-family: 'Montserrat';
+}
+
+@media screen and (max-width:450px) {
+
+    form {
+        width: 90%;
+    }
+}

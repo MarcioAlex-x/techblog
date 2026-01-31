@@ -1,0 +1,22 @@
+header {
+    max-width: 960px;
+    margin: auto;
+}
+
+.title-header {
+    text-align: center;
+    margin-block: 24px;
+    font-size: 48px;
+}
+
+.image-header {
+    display: block;
+    margin: 0 auto 40px;
+    width: 100%;
+}
+
+@media screen and (max-width:450px) {
+    .title-header {
+        font-size: 40px;
+    }
+}
