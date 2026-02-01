@@ -53,7 +53,7 @@ export const Login = () =>{
 
             </form>
             <div className="dialog-box">
-                Ainda não tem uma conta? <Link to='/register'>Cadastre-se</Link> e compartilhe as suas ideias
+                <p style={{textAlign:'center', marginTop:'40px'}}>Ainda não tem uma conta? <Link to='/register'>Cadastre-se</Link> e compartilhe as suas ideias</p>
             </div>
         </div>
     )

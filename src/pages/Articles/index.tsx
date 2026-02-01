@@ -37,11 +37,13 @@ export const Articles = () => {
 
                     <h2 className={Style['title-article']}>{artigo.titulo}</h2>
 
-                    <p className={Style['text-article']}>Criado em {artigo.criadoEm.toDate().toLocaleString('pt-BR', {
-                        day: '2-digit', month: 'long', year: 'numeric'
-                    })} às {artigo.criadoEm.toDate().toLocaleString('pt-BR', {
-                        hour: '2-digit', minute: '2-digit'
-                    })} {artigo.nome && <span> por {artigo.nome}</span>}</p>
+                    <i>
+                        <p className={Style['text-article']}>Criado em {artigo.criadoEm.toDate().toLocaleString('pt-BR', {
+                            day: '2-digit', month: 'long', year: 'numeric'
+                        })} às {artigo.criadoEm.toDate().toLocaleString('pt-BR', {
+                            hour: '2-digit', minute: '2-digit'
+                        })} {artigo.nome && <span> por {artigo.nome}</span>}</p>
+                    </i>
 
                     {artigo.imagem && (
                         <img

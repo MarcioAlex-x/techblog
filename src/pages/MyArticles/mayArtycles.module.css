@@ -7,11 +7,11 @@
     border: 1px solid #bdc3c7;
     padding: 8px;
     border-radius: 4px;
-    margin-bottom: 4px;
+    margin-bottom: 16px;
 }
 
 .text-article {
-    margin: 16px 0;
+    margin: 16px 0 24px;
     white-space: pre-line;
 }
 
@@ -22,7 +22,7 @@
 img {
     width: 480px;
     display: block;
-    margin: 0 auto;
+    margin: 24px auto;
 }
 
 @media screen and (max-width: 450px) {

@@ -8,6 +8,7 @@
     border-radius: 4px;
     padding: 8px;
     position: relative;
+    margin-bottom: 16px;
 }
 
 .text-article {
@@ -22,8 +23,12 @@
 
 .article-image {
     max-width: 480px;
-    margin: 0 auto;
+    margin: 24px auto 32px;
 
+}
+
+.title-article{
+    font-size: 32px;
 }
 
 @media screen and (max-width:450px) {

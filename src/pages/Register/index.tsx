@@ -77,7 +77,9 @@ export const Register = () => {
                     className="btn btn-action" type="submit" value="Registrar" />
             </form>
             <div className="dialog-box">
-                Já tem uma conta? <Link to='/login'>Faça login</Link> e compartilhe as suas ideias
+                <p style={{textAlign:'center', marginTop:'40px'}}>Já tem uma conta? <Link to='/login'>
+                <br />
+                Faça login</Link> e compartilhe as suas ideias</p>
             </div>
         </div>
     )

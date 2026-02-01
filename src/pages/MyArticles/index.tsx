@@ -63,7 +63,7 @@ export const MyArticles = () => {
             {artigos.map((artigo) => (
                 <div className={Style['article-container']} key={artigo.id}>
                     <h2>{artigo.titulo}</h2>
-                    <p >Criado em {artigo.criadoEm.toDate().toLocaleString('pt-BR')}</p>
+                    <p ><i>Criado em {artigo.criadoEm.toDate().toLocaleString('pt-BR')}</i></p>
                     {artigo.imagem && (
                         <img
                             src={artigo.imagem}

@@ -92,7 +92,7 @@ input[type='checkbox'] {
 }
 
 .dialog-box {
-    width: 480px;
+    width: 100%;
     margin: 0 auto;
 }
 
