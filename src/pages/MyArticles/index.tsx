@@ -4,6 +4,7 @@ import { db } from "../../firebaseConfig"
 import { useAuth } from "../../services/useAuth"
 import { Link } from "react-router-dom"
 import Style from './mayArtycles.module.css'
+import Linkify from 'linkify-react';
 
 type Artigos = {
     id: string
@@ -72,7 +73,7 @@ export const MyArticles = () => {
                             loading="lazy"
                         />
                     )}
-                    <p className={Style['text-article']}>{artigo.texto}</p>
+                    <p className={Style['text-article']}><Linkify>{artigo.texto}</Linkify></p>
                     <button className="btn btn-danger" onClick={() => handleDelete(artigo.id)}>Apagar</button>
                     <button className="btn btn-action"><Link className="link" to={`/update-article/${artigo.id}`}>Atualizar</Link></button>
                 </div>

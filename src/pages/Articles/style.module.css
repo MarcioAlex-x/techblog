@@ -13,6 +13,7 @@
 
 .text-article {
     margin-bottom: 16px;
+    white-space: pre-line;
 }
 
 .detalhe {

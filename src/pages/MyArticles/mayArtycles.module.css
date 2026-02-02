@@ -29,6 +29,7 @@ img {
     .container {
         max-width: 100%;
         margin: 16px auto;
+        padding: 16px;
     }
 
     .article-container {

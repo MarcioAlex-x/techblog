@@ -4,6 +4,7 @@ import { collection, getDocs, Timestamp } from "firebase/firestore"
 import { Link } from "react-router-dom"
 import Style from './style.module.css'
 import { Header } from "../../components/Header"
+import Linkify from "linkify-react"
 
 type Artigo = {
     id: string
@@ -23,7 +24,7 @@ export const Articles = () => {
             const snapshot = await getDocs(collection(db, 'artigos'))
             const artigosSnap = snapshot.docs.map((doc) => (
                 { id: doc.id, ...doc.data() as Omit<Artigo, 'id'> }
-            )).sort((a,b)=>b.criadoEm.toMillis() - a.criadoEm.toMillis())
+            )).sort((a, b) => b.criadoEm.toMillis() - a.criadoEm.toMillis())
             setArtigos(artigosSnap)
         }
         fetchData()
@@ -54,7 +55,11 @@ export const Articles = () => {
                         />
                     )}
 
-                    <p className={Style['text-article']} style={{ whiteSpace: 'pre-line' }}>{artigo.texto}</p>
+                    <p className={Style['text-article']} style={{ whiteSpace: 'pre-line' }}>
+                        <Linkify>
+                            {artigo.texto}
+                        </Linkify>
+                    </p>
 
                     <Link className={`link nav-link ${Style.detalhe}`} to={`/article/${artigo.id}`}>Detalhes</Link>
                 </div>
