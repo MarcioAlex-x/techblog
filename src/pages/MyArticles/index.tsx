@@ -18,12 +18,13 @@ type Artigos = {
 
 export const MyArticles = () => {
     const [artigos, setArtigos] = useState<Artigos[]>([])
+    const [loading, setLoading] = useState(true)
     const { user } = useAuth()
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-
+                setLoading(true)
                 if (!user) return
 
                 const q = query(collection(db, 'artigos'), where('uid', '==', user?.uid))
@@ -37,6 +38,8 @@ export const MyArticles = () => {
                 if (err instanceof Error) {
                     console.error(err.message)
                 }
+            }finally{
+                setLoading(false)
             }
         }
         fetchData()
@@ -61,6 +64,7 @@ export const MyArticles = () => {
 
     return (
         <div className={Style.container}>
+            {loading && <div className="spinnerContainer"><img src="/loading.gif" /></div>}
             {artigos.map((artigo) => (
                 <div className={Style['article-container']} key={artigo.id}>
                     <h2 >{artigo.titulo}</h2>

@@ -14,12 +14,13 @@ export const Article = () => {
     const [titulo, setTitulo] = useState('')
     const [texto, setTexto] = useState('')
     const [criadoEm, setCriadoEm] = useState<Timestamp|null>(null)
+    const [loading, setLoading] = useState(true)
     console.log('olá')
 
     useEffect(()=>{
+        setLoading(true)
         const fetchData = async () => {
         try {
-
             if (!id) return
 
             const articleRef = doc(db, 'artigos', id)
@@ -36,14 +37,19 @@ export const Article = () => {
             if (err instanceof Error) {
                 console.error(err.message)
             }
+        } finally{
+            setLoading(false)
         }
     }
 
     fetchData()
     },[id])
 
+    
     return (
         <div className={Style.container}>
+
+            <div className="spinnerContainer">{loading && <img src="/loading.gif" />}</div>
             <div className={Style['article-container']}>
                 <h2>{titulo}</h2>
                 {criadoEm && <p className={Style.criadoEm}>Criado em {criadoEm.toDate().toLocaleDateString()} {nome && <span> por {nome}</span>}</p>}

@@ -18,21 +18,26 @@ type Artigo = {
 
 export const Articles = () => {
     const [artigos, setArtigos] = useState<Artigo[]>([])
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         const fetchData = async () => {
+            setLoading(true)
             const snapshot = await getDocs(collection(db, 'artigos'))
             const artigosSnap = snapshot.docs.map((doc) => (
                 { id: doc.id, ...doc.data() as Omit<Artigo, 'id'> }
             )).sort((a, b) => b.criadoEm.toMillis() - a.criadoEm.toMillis())
+            setLoading(false)
             setArtigos(artigosSnap)
         }
+        
         fetchData()
     }, [])
 
     return (
         <div className={Style.container}>
             <Header />
+            <div className="spinnerContainer">{loading && <img src="/loading.gif"/>}</div>
             {artigos.map(artigo => (
                 <div className={Style['article-container']} key={artigo.id} >
 

@@ -120,6 +120,18 @@ label {
     font-family: 'Montserrat';
 }
 
+.spinnerContainer{
+    background-color: transparent;
+
+}
+
+.spinnerContainer img{
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 40px;
+    width: 25%;
+}
+
 @media screen and (max-width:450px) {
 
     form {
