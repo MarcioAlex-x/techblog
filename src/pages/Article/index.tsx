@@ -2,6 +2,8 @@ import { doc, getDoc, type Timestamp } from "firebase/firestore"
 import { useEffect, useState } from "react"
 import { db } from "../../firebaseConfig"
 import { useParams } from "react-router-dom"
+import Linkify from 'linkify-react'
+import Style from './article.module.css'
 
 export const Article = () => {
  
@@ -41,10 +43,14 @@ export const Article = () => {
     },[id])
 
     return (
-        <div>
-            <h2>{titulo}</h2>
-            {criadoEm && <p>Criado em {criadoEm.toDate().toLocaleDateString()} {nome && <span> por {nome}</span>}</p>}
-            <p style={{whiteSpace:'pre-line'}}>{texto}</p>
+        <div className={Style.container}>
+            <div className={Style['article-container']}>
+                <h2>{titulo}</h2>
+                {criadoEm && <p className={Style.criadoEm}>Criado em {criadoEm.toDate().toLocaleDateString()} {nome && <span> por {nome}</span>}</p>}
+                <Linkify>
+                    <p style={{whiteSpace:'pre-line'}}>{texto}</p>
+                </Linkify>
+            </div>
         </div>
     )
 }

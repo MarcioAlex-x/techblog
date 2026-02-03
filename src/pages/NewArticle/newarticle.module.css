@@ -1,9 +1,12 @@
 .new-article-title{
     text-align: center;
-    margin: 16px auto;
+    margin: 32px auto 32px;
     font-size: 32px;
+    color: #fff;
 }
 
 .new-article-sub-title{
+    color: #fff;
+    font-weight: bold;
     text-align: center;
 }

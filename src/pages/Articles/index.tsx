@@ -57,11 +57,11 @@ export const Articles = () => {
 
                     <p className={Style['text-article']} style={{ whiteSpace: 'pre-line' }}>
                         <Linkify>
-                            {artigo.texto}
+                            {artigo.texto.substring(0,450)}...<Link className={Style['continue-lendo']} to={`/article/${artigo.id}`}>continue lendo</Link>
                         </Linkify>
                     </p>
 
-                    <Link className={`link nav-link ${Style.detalhe}`} to={`/article/${artigo.id}`}>Detalhes</Link>
+                    
                 </div>
             ))}
         </div>

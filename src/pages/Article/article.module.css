@@ -1,0 +1,19 @@
+
+.container{
+    max-width: 960px;
+    margin: 40px auto;
+}
+
+.article-container{
+    background-color: #ffffffe7;
+    padding: 24px;
+}
+
+.article-container h2{
+    color: #2c3e50;
+}
+
+.criadoEm{
+    font-style: italic;
+    margin-bottom: 40px;
+}

@@ -100,6 +100,7 @@ export const NewArticle = () => {
             <h2 className={Style['new-article-title']}>Contribua com suas ideias</h2>
             <p className={Style['new-article-sub-title']}>Descreva com detalhes seu pensamentos, ideias e descobertas relevantes ao tema tecnologia da informação</p>
             <form onSubmit={handleSubmit}>
+                
                 <div className="form-container">
                     <label htmlFor="titulo">Imagem</label>
                     <input

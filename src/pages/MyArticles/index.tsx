@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { db } from "../../firebaseConfig"
 import { useAuth } from "../../services/useAuth"
 import { Link } from "react-router-dom"
-import Style from './mayArtycles.module.css'
+import Style from './myArtycles.module.css'
 import Linkify from 'linkify-react';
 
 type Artigos = {
@@ -63,7 +63,7 @@ export const MyArticles = () => {
         <div className={Style.container}>
             {artigos.map((artigo) => (
                 <div className={Style['article-container']} key={artigo.id}>
-                    <h2>{artigo.titulo}</h2>
+                    <h2 >{artigo.titulo}</h2>
                     <p ><i>Criado em {artigo.criadoEm.toDate().toLocaleString('pt-BR')}</i></p>
                     {artigo.imagem && (
                         <img

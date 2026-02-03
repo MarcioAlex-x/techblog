@@ -6,9 +6,10 @@
 .article-container {
     border: 1px solid #7f8c8d;
     border-radius: 4px;
-    padding: 8px;
+    padding: 24px;
     position: relative;
     margin-bottom: 16px;
+    background-color: #fff;
 }
 
 .text-article {
@@ -30,6 +31,11 @@
 
 .title-article{
     font-size: 32px;
+}
+
+.continue-lendo{
+    color: #7f8c8d;
+    text-decoration: none;
 }
 
 @media screen and (max-width:450px) {
